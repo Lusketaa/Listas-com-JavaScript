@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+</head>
+
+<body>
+    <section>
+        <h1>JS Intermediário: Tabelas!</h1>
+        <div class="filtros">
+            <select id="filtro-sexo" onchange="filtrar(funcionarios)">
+                <option disabled selected>Filtro de Sexo</option>
+                <option value="todos">Todos</option>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+            </select>
+
+            <select id="filtro-idade" onchange="filtrar(funcionarios)">
+                <option disabled selected>Filtro de Idade</option>
+                <option value="todos">Todos</option>
+                <option value="maiores">Maiores de idade</option>
+                <option value="menores">Menores de idade</option>
+            </select>
+        </div> 
+        <div class="tbl-header">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th>Sexo</th>
+                        <th>Salário</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="tbl-content">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tbody id="tabela-body"></tbody>
+            </table>
+        </div>
+        <div class="valor-total">Valor total: R$
+            <span id="total">???</span>
+        </div>
+    </section>
+</body>
+
+</html>
